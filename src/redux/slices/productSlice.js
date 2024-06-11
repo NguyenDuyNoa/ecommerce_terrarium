@@ -3,41 +3,41 @@ import axios from "axios";
 import { notification } from "../../utils/helper";
 
 export const getProductLists = createAsyncThunk("getProductLists", async () => {
-    let res = await axios.get('http://https://deploy-terrarium.vercel.app/products')
+    let res = await axios.get('https://deploy-terrarium.vercel.app/products')
     return res.data;
 });
 
 export const addProduct = createAsyncThunk("addProduct", async (newProduct) => {
-    const res = await axios.post(`http://https://deploy-terrarium.vercel.app/products`, newProduct);
+    const res = await axios.post(`https://deploy-terrarium.vercel.app/products`, newProduct);
     console.log(res)
     return res.data;
 });
 
 export const editProduct = createAsyncThunk("editProduct", async (updatedProduct) => {
-    const res = await axios.put(`http://https://deploy-terrarium.vercel.app/products/${updatedProduct.id}`, updatedProduct);
+    const res = await axios.put(`https://deploy-terrarium.vercel.app/products/${updatedProduct.id}`, updatedProduct);
     return res.data;
 });
 
 export const deleteProduct = createAsyncThunk("deleteProduct", async (id) => {
-    const res = await axios.delete(`http://https://deploy-terrarium.vercel.app/products/${id}`);
+    const res = await axios.delete(`https://deploy-terrarium.vercel.app/products/${id}`);
     console.log(res)
     return res
 })
 
 export const filterProductById = createAsyncThunk("filterProductById", async (id) => {
-    let res = await axios.get(`http://https://deploy-terrarium.vercel.app/products?id=${id}`);
+    let res = await axios.get(`https://deploy-terrarium.vercel.app/products?id=${id}`);
     return res.data;
 }
 );
 
 export const filterProductByCategory = createAsyncThunk("filterProductByCategory", async (category) => {
-    let res = await axios.get(`http://https://deploy-terrarium.vercel.app/products?category=${category}`);
+    let res = await axios.get(`https://deploy-terrarium.vercel.app/products?category=${category}`);
     return res.data;
 }
 );
 
 export const filterProductByCategoryAndSort = createAsyncThunk("filterProductByCategoryAndSort", async ({ category, type, sort }) => {
-    let res = await axios.get(`http://https://deploy-terrarium.vercel.app/products?category=${category}&_sort=${type}&_order=${sort}`);
+    let res = await axios.get(`https://deploy-terrarium.vercel.app/products?category=${category}&_sort=${type}&_order=${sort}`);
     return res.data;
 }
 );
@@ -45,7 +45,7 @@ export const filterProductByCategoryAndSort = createAsyncThunk("filterProductByC
 
 
 export const searchProductByName = createAsyncThunk("searchProductByName", async (name) => {
-    let res = await axios.get(`http://https://deploy-terrarium.vercel.app/products?name_like=${name}`);
+    let res = await axios.get(`https://deploy-terrarium.vercel.app/products?name_like=${name}`);
     if (name === '') {
         return { products: [] }
     } else {
@@ -60,8 +60,8 @@ export const fetchProductsPage = createAsyncThunk(
         const { category, page, pageSize } = payload;
         const startItem = (page - 1) * pageSize;
         try {
-            let originalPage = await axios.get(`http://https://deploy-terrarium.vercel.app/products?category=${category}`);
-            const res = await axios.get(`http://https://deploy-terrarium.vercel.app/products?category=${category}&_start=${startItem}&_limit=${pageSize}`);
+            let originalPage = await axios.get(`https://deploy-terrarium.vercel.app/products?category=${category}`);
+            const res = await axios.get(`https://deploy-terrarium.vercel.app/products?category=${category}&_start=${startItem}&_limit=${pageSize}`);
             return { products: res.data, totalCount: originalPage.data.length };
         } catch (error) {
             throw error;
@@ -73,7 +73,7 @@ export const filterProductUnder500k = createAsyncThunk(
     "filterProductUnder500k",
     async () => {
         try {
-            const res = await axios.get("http://https://deploy-terrarium.vercel.app/products");
+            const res = await axios.get("https://deploy-terrarium.vercel.app/products");
             const filteredProducts = res.data.filter(
                 (product) => product.price < 500000
             );
