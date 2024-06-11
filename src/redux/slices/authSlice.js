@@ -4,12 +4,12 @@ import CryptoJS from "crypto-js";
 import { notification } from "../../utils/helper";
 
 export const register = createAsyncThunk("register", async (newUser) => {
-  const res = await axios.post(`http://localhost:4000/users`, newUser);
+  const res = await axios.post(`http://https://deploy-terrarium.vercel.app/users`, newUser);
   return res.data;
 });
 
 export const login = createAsyncThunk("login", async (inforLogin) => {
-  const res = await axios.get(`http://localhost:4000/users`);
+  const res = await axios.get(`http://https://deploy-terrarium.vercel.app/users`);
   return {
     users: res.data,
     inforLogin: inforLogin,
@@ -17,17 +17,17 @@ export const login = createAsyncThunk("login", async (inforLogin) => {
 });
 
 export const getListUser = createAsyncThunk("getListUser", async () => {
-  const res = await axios.get(`http://localhost:4000/users`);
+  const res = await axios.get(`http://https://deploy-terrarium.vercel.app/users`);
   return res.data
 })
 
 export const deleteUser = createAsyncThunk("deleteUser", async (id) => {
-  const res = await axios.delete(`http://localhost:4000/users/` + id);
+  const res = await axios.delete(`http://https://deploy-terrarium.vercel.app/users/` + id);
   return res
 })
 
 export const editUser = createAsyncThunk("editUser", async ({ updatedUser }) => {
-  const res = await axios.put(`http://localhost:4000/users/${updatedUser.id}`, updatedUser);
+  const res = await axios.put(`http://https://deploy-terrarium.vercel.app/users/${updatedUser.id}`, updatedUser);
   return res.data;
 });
 
