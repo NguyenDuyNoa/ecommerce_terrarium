@@ -284,7 +284,7 @@ let Checkout = () => {
                       />
                     ))}
                   {cartList.length === 0 && (
-                    <img src="../../assets/empty_cart.png" alt="not-found" />
+                    <img src="https://i.imgur.com/TziGrmn.png" alt="not-found" />
                   )}
                 </tbody>
               </table>

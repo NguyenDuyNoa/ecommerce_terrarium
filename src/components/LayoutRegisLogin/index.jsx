@@ -6,7 +6,7 @@ const LayoutRegisLogin = ({ children, name ="Đăng ký" }) => {
     <div className="w-screen">
       <div className="w-full flex pl-20">
         <Link className="flex" to={"/"}>
-          <img className="h-24" src="./img/logo.png" alt="not-found" />
+          <img className="h-24" src="https://i.imgur.com/ud1SueH.png" alt="not-found" />
           <p className="flex items-center text-2xl font-medium ml-2">{name}</p>
         </Link>
       </div>

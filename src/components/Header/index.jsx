@@ -67,7 +67,7 @@ const Header = () => {
                         </div>
                     </div>
                     <Link to='/' className="flex flex-1 justify-center">
-                        <img className="w-52 cursor-pointer" src={process.env.PUBLIC_URL + "/img/logo.png"} alt="Terrarium" />
+                        <img className="w-52 cursor-pointer" src="https://i.imgur.com/ud1SueH.png" alt="Terrarium" />
                     </Link>
                     <div className="flex-1 float-right">
                         <div className=" float-right">

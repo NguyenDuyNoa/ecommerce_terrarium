@@ -13,7 +13,7 @@ const Footer = () => {
         <div className="py-10 text-center md:text-left">
           <div className=" flex justify-between">
             <div className=" w-[40%]">
-              <img className=" h-20" src={process.env.PUBLIC_URL + "/img/logo.png"} alt="" />
+              <img className=" h-20" src="https://i.imgur.com/ud1SueH.png" alt="" />
               <h4 className=" mb-2 "> Ra đời với mong muốn là điểm nối của mỗi người với thiên nhiên bằng những sản phẩm chất lượng, sáng tạo, thuần Việt</h4>
               <h4 className=" mb-2 "><strong>Địa chỉ: </strong>37 Hoa Mai, Phường 2, Phú Nhuận, TP. Hồ Chí Minh</h4 >
               <h4 className=" mb-2 "><strong>Điện thoại: </strong>090 630 25 96 - 094 500 41 75</h4 >

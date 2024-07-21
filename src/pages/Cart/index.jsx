@@ -73,7 +73,7 @@ let Cart = () => {
                                                 ))}
                                             {cartList.length == 0 && (
                                                 <div className="flex flex-wrap  h-full">
-                                                    <img src={process.env.PUBLIC_URL + "/img/empty_cart.png"} className="rounded-2xl" alt="not-found" />
+                                                    <img src="https://i.imgur.com/TziGrmn.png" className="rounded-2xl" alt="not-found" />
                                                 </div>)}
                                         </tbody>
                                     </table>
